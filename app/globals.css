@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* styles/globals.css */
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: #f5f5f5; */
+  font-family: sans-serif;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation-duration: 60s;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-scroll {
+    animation-duration: 45s;
+  }
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
+
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
