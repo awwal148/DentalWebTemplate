@@ -33,6 +33,12 @@ export default function RootLayout({ children }) {
           </main>
         </div>
         <Footer />
+        {/* GHL Chat Widget */}
+        <script
+          src="https://beta.leadconnectorhq.com/loader.js"
+          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="68e26f349662389a78d0f3f5"
+        ></script>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Whychooseus = () => {
@@ -33,7 +34,7 @@ const Whychooseus = () => {
           <li>✔ Advanced Dental Equipment</li>
         </ul>
         <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
-          Book an Appointment
+          <Link href="./booking">Book an Appointment</Link>
         </button>
       </section>
       </>

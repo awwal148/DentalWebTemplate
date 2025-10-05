@@ -100,7 +100,7 @@ const Page = () => {
               Gentle, affordable, and professional dental services for the whole family.
             </p>
             <Link
-              href="/contact"
+              href="/booking"
               className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
             >
               Book Appointment
@@ -187,21 +187,24 @@ const Page = () => {
 
   <div className="grid md:grid-cols-3 gap-10">
     {[
-      {
-        title: "Teeth Cleaning",
-        desc: "Gentle, thorough cleanings to keep your smile fresh and healthy.",
-        img: service1,
-      },
-      {
-        title: "General Dentistry",
-        desc: "Transform your smile with whitening, veneers, and aesthetic enhancements.",
-        img: service2,
-      },
-      {
-        title: "Dental Implants",
-        desc: "Restore confidence with permanent, natural-looking tooth replacements.",
-        img: service3,
-      },
+       {
+    title: "Emergency Care",
+    desc: "Immediate, expert care when dental emergencies strike, because relief shouldn’t wait.",
+    img: service1,
+    link: "/services/emergency-care",
+  },
+  {
+    title: "General Dentistry",
+    desc: "Transform your smile with whitening, veneers, and aesthetic enhancements.",
+    img: service2,
+    link: "/services/general-dentistry",
+  },
+  {
+    title: "Dental Implants",
+    desc: "Restore confidence with permanent, natural-looking tooth replacements.",
+    img: service3,
+    link: "/services/dental-implant",
+  },
     ].map((service, i) => (
       <div key={i} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
         <Image
@@ -213,9 +216,11 @@ const Page = () => {
         <div className="p-6">
           <h3 className="text-2xl font-semibold text-blue-700 mb-2">{service.title}</h3>
           <p className="text-gray-600">{service.desc}</p>
-          <button className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium transition">
+          <Link href={service.link}>
+          <span className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium transition cursor-pointer">
             Learn More →
-          </button>
+          </span>
+        </Link>
         </div>
       </div>
     ))}
