@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import {
   FaCalendarAlt,
@@ -14,6 +15,15 @@ const BookAppointment = () => {
 
   useEffect(() => {
     setShowIframe(true);
+
+    const script = document.createElement('script');
+    script.src = 'https://brand.deevidental.com/js/form_embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
@@ -74,14 +84,12 @@ const BookAppointment = () => {
           </div>
         </div>
       </div>
-
-      {/* GHL Script */}
-      <script src="https://brand.deevidental.com/js/form_embed.js"></script>
     </section>
   );
 };
 
 export default BookAppointment;
+
 
 // import React from 'react';
 // import {
