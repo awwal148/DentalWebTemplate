@@ -14,6 +14,5 @@ export default function GHLChatWidget() {
       document.body.removeChild(script);
     };
   }, []);
-
   return null;
 }
