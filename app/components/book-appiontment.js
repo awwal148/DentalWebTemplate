@@ -39,25 +39,19 @@ const BookAppointment = () => {
             <span className="text-blue-600">for Your Dental Visit</span>
           </h1>
 
-          <div className="mt-8 w-full h-[655px] rounded-md overflow-hidden">
+          <div className="mt-8 w-full h-[655px] rounded-md overflow-y-auto">
             {showIframe && (
               <iframe
-                src="https://brand.deevidental.com/widget/form/xr70WpauAEHHtmsjmvxH"
+                src="https://brand.deevidental.com/widget/group/Z3ejExAYT3v4YNbamY5s"
                 style={{
                   width: '100%',
-                  height: '100%',
+                  height: '1000px', // taller than container to allow scrolling
                   border: 'none',
-                  borderRadius: '8px',
                 }}
-                id="inline-xr70WpauAEHHtmsjmvxH"
-                title="Deevidental Booking Form"
-                data-layout='{"id":"INLINE"}'
-                data-trigger-type="alwaysShow"
-                data-activation-type="alwaysActivated"
-                data-deactivation-type="neverDeactivate"
-                data-form-name="Form 5"
-                data-form-id="xr70WpauAEHHtmsjmvxH"
-              ></iframe>
+                scrolling="no"
+                id="Z3ejExAYT3v4YNbamY5s_1760284888749"
+                title="Deevidental Group Booking"
+              />
             )}
           </div>
         </div>
