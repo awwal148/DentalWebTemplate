@@ -1,4 +1,8 @@
 'use client'
+import blogImg1 from '../assets/blog/blogimg1.jpg'
+import blogImg2 from '../assets/blog/blogimg2.jpg'
+import blogImg3 from '../assets/blog/blogimg3.jpg'
+
 // components/BlogSection.tsx
 import Image from "next/image";
 
@@ -9,7 +13,7 @@ category: "Dental Care Tips",
 date: "Dec 15, 2024",
 title: "Essential Practices for a Healthy, Beautiful Smile",
 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
-image: "/images/blog1.jpg",
+image: blogImg1,
 },
 {
 id: 2,
@@ -17,7 +21,7 @@ category: "Teeth Whitening",
 date: "Dec 14, 2024",
 title: "Everything You Need to Know About Teeth Whitening",
 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
-image: "/images/blog2.jpg",
+image: blogImg2,
 },
 {
 id: 3,
@@ -25,7 +29,7 @@ category: "Dental Implant",
 date: "Dec 13, 2024",
 title: "Everything You Need to Know About Dental Implants",
 desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
-image: "/images/blog3.jpg",
+image: blogImg3,
 },
 ];
 

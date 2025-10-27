@@ -365,9 +365,9 @@ const Page = () => {
 <Ourteam />
 </div>
 {/*  Blogging section  */}
- {/* <div className="max-w-[1200px] mx-auto">
+ <div className="max-w-[1200px] mx-auto">
 <Blog />
-</div> */}
+</div>
 
 {/* FAQ Questions */}
 <div className="bg-[#0b1f40]">
