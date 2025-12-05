@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between px-6 h-16">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
-          <Link href="/">Denti Belli</Link>
+          <Link href="/">Dental</Link>
         </div>
 
         {/* Desktop Nav */}
