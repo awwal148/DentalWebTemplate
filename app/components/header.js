@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { createNavLinks } from '../constant';
+import Image from 'next/image';
+import dentibelli from '../assets/images/dentibelli.png'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +27,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between px-6 h-16">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
-          <Link href="/">Dental</Link>
+          <p>dentistryonroyalyork</p>
         </div>
 
         {/* Desktop Nav */}

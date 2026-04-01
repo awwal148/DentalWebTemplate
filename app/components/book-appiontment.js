@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   FaCalendarAlt,
   FaClock,
@@ -11,25 +9,10 @@ import {
 } from 'react-icons/fa';
 
 const BookAppointment = () => {
-  const [showIframe, setShowIframe] = useState(false);
-
-  useEffect(() => {
-    setShowIframe(true);
-
-    const script = document.createElement('script');
-    script.src = 'https://brand.deevidental.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <section className="bg-gray-50 rounded-xl shadow-lg py-12 px-6 max-w-6xl mx-auto animate-fadeIn">
       <div className="grid md:grid-cols-3 gap-10">
-        {/* EMBEDDED FORM SECTION */}
+        {/* FORM SECTION */}
         <div className="md:col-span-2">
           <h2 className="uppercase text-sm tracking-widest text-gray-500">
             Book an Appointment
@@ -39,21 +22,83 @@ const BookAppointment = () => {
             <span className="text-blue-600">for Your Dental Visit</span>
           </h1>
 
-          <div className="mt-8 w-full h-[655px] rounded-md overflow-y-auto">
-            {showIframe && (
-              <iframe
-                src="https://brand.deevidental.com/widget/group/Z3ejExAYT3v4YNbamY5s"
-                style={{
-                  width: '100%',
-                  height: '1000px', // taller than container to allow scrolling
-                  border: 'none',
-                }}
-                scrolling="no"
-                id="Z3ejExAYT3v4YNbamY5s_1760284888749"
-                title="Deevidental Group Booking"
+          <form className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Name */}
+            <div className="relative">
+              <FaUserMd className="absolute top-3 left-3 text-blue-600" />
+              <input
+                type="text"
+                placeholder="Ex. John Doe"
+                className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-            )}
-          </div>
+            </div>
+
+            {/* Phone */}
+            <div className="relative">
+              <FaPhoneAlt className="absolute top-3 left-3 text-blue-600" />
+              <input
+                type="text"
+                placeholder="Enter Phone Number"
+                className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            {/* Appointment Type */}
+            <div className="relative">
+              <FaTooth className="absolute top-3 left-3 text-blue-600" />
+              <select className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option>Type of Appointment</option>
+                <option>Check-up</option>
+                <option>Cleaning</option>
+                <option>Whitening</option>
+              </select>
+            </div>
+
+            {/* Dentist */}
+            <div className="relative">
+              <FaUserMd className="absolute top-3 left-3 text-blue-600" />
+              <select className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option>Preferred Dentist</option>
+                <option>Dr. David Brown</option>
+                <option>Dr. Emily Watson</option>
+              </select>
+            </div>
+
+            {/* Date */}
+            <div className="relative">
+              <FaCalendarAlt className="absolute top-3 left-3 text-blue-600" />
+              <input
+                type="date"
+                className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            {/* Time */}
+            <div className="relative">
+              <FaClock className="absolute top-3 left-3 text-blue-600" />
+              <input
+                type="time"
+                className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            {/* Notes */}
+            <div className="relative md:col-span-2">
+              <FaStickyNote className="absolute top-3 left-3 text-blue-600" />
+              <textarea
+                placeholder="Special Requests or Notes"
+                rows="3"
+                className="pl-10 border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+            </div>
+
+            {/* Button */}
+            <div className="md:col-span-2 flex justify-center">
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md">
+                Book Appointment
+              </button>
+            </div>
+          </form>
         </div>
 
         {/* CLINIC INFO SECTION */}
@@ -85,7 +130,10 @@ const BookAppointment = () => {
 export default BookAppointment;
 
 
-// import React from 'react';
+
+// 'use client';
+
+// import React, { useEffect, useState } from 'react';
 // import {
 //   FaCalendarAlt,
 //   FaClock,
@@ -96,10 +144,25 @@ export default BookAppointment;
 // } from 'react-icons/fa';
 
 // const BookAppointment = () => {
+//   const [showIframe, setShowIframe] = useState(false);
+
+//   useEffect(() => {
+//     setShowIframe(true);
+
+//     const script = document.createElement('script');
+//     script.src = 'https://brand.deevidental.com/js/form_embed.js';
+//     script.async = true;
+//     document.body.appendChild(script);
+
+//     return () => {
+//       document.body.removeChild(script);
+//     };
+//   }, []);
+
 //   return (
 //     <section className="bg-gray-50 rounded-xl shadow-lg py-12 px-6 max-w-6xl mx-auto animate-fadeIn">
 //       <div className="grid md:grid-cols-3 gap-10">
-//         {/* FORM SECTION */}
+//         {/* EMBEDDED FORM SECTION */}
 //         <div className="md:col-span-2">
 //           <h2 className="uppercase text-sm tracking-widest text-gray-500">
 //             Book an Appointment
@@ -109,83 +172,21 @@ export default BookAppointment;
 //             <span className="text-blue-600">for Your Dental Visit</span>
 //           </h1>
 
-//           <form className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-//             {/* Name */}
-//             <div className="relative">
-//               <FaUserMd className="absolute top-3 left-3 text-blue-600" />
-//               <input
-//                 type="text"
-//                 placeholder="Ex. John Doe"
-//                 className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+//           <div className="mt-8 w-full h-[655px] rounded-md overflow-y-auto">
+//             {showIframe && (
+//               <iframe
+//                 src="https://brand.deevidental.com/widget/group/Z3ejExAYT3v4YNbamY5s"
+//                 style={{
+//                   width: '100%',
+//                   height: '1000px', // taller than container to allow scrolling
+//                   border: 'none',
+//                 }}
+//                 scrolling="no"
+//                 id="Z3ejExAYT3v4YNbamY5s_1760284888749"
+//                 title="Deevidental Group Booking"
 //               />
-//             </div>
-
-//             {/* Phone */}
-//             <div className="relative">
-//               <FaPhoneAlt className="absolute top-3 left-3 text-blue-600" />
-//               <input
-//                 type="text"
-//                 placeholder="Enter Phone Number"
-//                 className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-//               />
-//             </div>
-
-//             {/* Appointment Type */}
-//             <div className="relative">
-//               <FaTooth className="absolute top-3 left-3 text-blue-600" />
-//               <select className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-//                 <option>Type of Appointment</option>
-//                 <option>Check-up</option>
-//                 <option>Cleaning</option>
-//                 <option>Whitening</option>
-//               </select>
-//             </div>
-
-//             {/* Dentist */}
-//             <div className="relative">
-//               <FaUserMd className="absolute top-3 left-3 text-blue-600" />
-//               <select className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-//                 <option>Preferred Dentist</option>
-//                 <option>Dr. David Brown</option>
-//                 <option>Dr. Emily Watson</option>
-//               </select>
-//             </div>
-
-//             {/* Date */}
-//             <div className="relative">
-//               <FaCalendarAlt className="absolute top-3 left-3 text-blue-600" />
-//               <input
-//                 type="date"
-//                 className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-//               />
-//             </div>
-
-//             {/* Time */}
-//             <div className="relative">
-//               <FaClock className="absolute top-3 left-3 text-blue-600" />
-//               <input
-//                 type="time"
-//                 className="pl-10 border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-//               />
-//             </div>
-
-//             {/* Notes */}
-//             <div className="relative md:col-span-2">
-//               <FaStickyNote className="absolute top-3 left-3 text-blue-600" />
-//               <textarea
-//                 placeholder="Special Requests or Notes"
-//                 rows="3"
-//                 className="pl-10 border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-//               ></textarea>
-//             </div>
-
-//             {/* Button */}
-//             <div className="md:col-span-2 flex justify-center">
-//               <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md">
-//                 Book Appointment
-//               </button>
-//             </div>
-//           </form>
+//             )}
+//           </div>
 //         </div>
 
 //         {/* CLINIC INFO SECTION */}
